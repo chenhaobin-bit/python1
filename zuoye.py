@@ -1,0 +1,11 @@
+import numpy as np
+a = np.arange(20).reshape(4,5)
+print("a的维度为：",a.ndim)
+print("a的轴的个数为：",a.ndim)
+print("a的元素个数为：",a.size)
+print("a的每个元素字节大小为:",a.itemsize)
+b = np.array([[1,2],[3,4]])
+print("b的元素类型为：",b.dtype)
+c = np.ones((4,4))
+d = np.random.rand(3,2)
+print("数组d为",d)
