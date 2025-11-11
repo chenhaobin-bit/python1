@@ -2,9 +2,6 @@ class Zoo:
     def __init__(self,name,age):
         self.name = name
         self.age = age
-    
-    def make_sound(self):
-        print(f"{self.name}发出了咆哮声")
     def feed(self):
         print(f"{self.name}正在被喂食")
 class Lion(Zoo):
