@@ -9,6 +9,7 @@ for word in fl:
     else:
         worddict[word] = 1
 top = sorted(worddict.items(),key=lambda x:x[1],reverse=True)
+top = sorted(worddict.items(),key = lambda x : x[1],reverse = True)
 for i in range(10):
     word,count = top[i]
     print(f"{word}:{count}")

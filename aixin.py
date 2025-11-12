@@ -14,14 +14,14 @@ def create_window_and_label(window, title, width, height, text, font):
 
 # 创建主窗口
 root = tk.Tk()
-create_window_and_label(root, " ", 200, 50, "我想你了！", ("仿宋", 18, "bold"))
+create_window_and_label(root, " ", 300, 50, "我想你了！", ("仿宋", 18, "bold"))
 
 
 # 创建第二个窗口
 window2 = tk.Toplevel()
 window2.title(" ")
 window2.configure(bg="pink")
-window2.geometry("190x40")
+window2.geometry("3000x40")
 
 
 # 获取屏幕尺寸
@@ -54,21 +54,19 @@ def create_windows():
         window = tk.Toplevel()
         window.title(" ")
         window.configure(bg="pink")
-        window.geometry("200x50")
+        window.geometry("300x50")
         x = random.randint(0, root.winfo_screenwidth() - 200)
         y = random.randint(0, root.winfo_screenheight() - 50)
         window.geometry(f"+{x}+{y}")
         label = tk.Label(
-            window, text="我想你了！", bg="pink", font=("仿宋", 18, "bold")
+            window, text="我是galgame大王！", bg="pink", font=("仿宋", 18, "bold")
         )
         label.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
 
         count += 1
-        root.after(100, create_windows)
+        root.after(60, create_windows)
 
 
 count = 0
-root.after(200, create_windows)
-
-# 运行主循环
+root.after(60, create_windows)
 root.mainloop()
